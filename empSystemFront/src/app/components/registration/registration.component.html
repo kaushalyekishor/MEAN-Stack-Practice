@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!--<meta charset="UTF-8">-->
+	<title>Registration</title>
+	<link rel="stylesheet" href="registration.component.css">
+</head>
+<body>
+<form [formGroup]="registerForm" (ngSubmit)="register()">
+<div class="container">
+	<div class="title">
+		<p>Registration</p>
+	</div>
+	<div class="form">
+	    <div class="input_field">
+			<label>Username</label>
+            <input type="text" name="name" class="input" placeholder="name" formControlName="name" required>
+		</div>
+		<div class="input_field">
+			<label>email</label>
+            <input type="text" name="email" class="input" placeholder="email" formControlName="email" >
+            
+		</div>
+		<div class="input_field">
+			<label>Password</label>
+            <input type="password" name="password" class="input" placeholder="password" formControlName="password" >
+			<p>Make sure atleast 15 character OR at least 8 character including a number and a lowercase letter <a href="#">Learn more</a></p>
+		</div>
+		<div class="btn">
+			<input type="submit" value="Sign up" class="sign_btn">
+		</div>
+	    <div class="footer">	
+		    <p>By clicking "Sign up", you agree to our <a href="#">Terms of service</a>
+		    and <a href="#">Privacy statement.</a> we'll ocassionally send you account related emails.</p>
+        </div> 
+        <p>Already have an account? <a href="../login/login.component.html">Login</a></p>
+    </div>
+</div>	
+</form>
+</body>
+</html>
